@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> Tic-Tac-Toe </title>    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>  
+   <script>
+count=0
+$(document).ready(function(){
+$('.btn').click(function(){
+
+if(count%2==0 && $(this).val()!='O' && $(this).val()!='X')
+{
+count=count+1
+$(this).val("O")
+$("#ipt").val("  Player 2")
+}
+if(count%2!=0 && $(this).val()!='O' && $(this).val()!='X')
+{
+count=count+1
+$(this).val("X");
+$("#ipt").val("  Player 1")
+}
+if($("#1").val()==$("#2").val()  && $("#2").val()==$("#3").val() )
+{
+  if($("#1").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#1").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if(count==9)
+{
+  $("#ipt").val("Draw")
+
+}
+
+if($("#1").val()==$("#4").val()  && $("#4").val()==$("#7").val() )
+{
+  if($("#1").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#1").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#1").val()==$("#5").val()  && $("#5").val()==$("#9").val() )
+{
+  if($("#1").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#1").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#2").val()==$("#5").val()  && $("#5").val()==$("#8").val() )
+{
+  if($("#2").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#2").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#3").val()==$("#6").val()  && $("#6").val()==$("#9").val() )
+{
+  if($("#3").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#3").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#3").val()==$("#5").val()  && $("#5").val()==$("#7").val() )
+{
+  if($("#3").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#3").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#4").val()==$("#5").val()  && $("#5").val()==$("#6").val() )
+{
+  if($("#4").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#4").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+if($("#7").val()==$("#8").val()  && $("#8").val()==$("#9").val() )
+{
+  if($("#7").val()=='O')
+  {
+  $("#ipt").val("  Player 1 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+  if($("#7").val()=='X')
+  {
+  $("#ipt").val("  Player 2 is winner");
+ $("input[type='button']").attr("disabled", 'disabled');
+
+}
+}
+
+});
+$("#a").click(function () {
+    document.location.reload(true);});
+});
+</script>
+<style>
+#a
+{
+width:500px;
+height:50px;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+border: 2px solid black;
+border-radius:20px;
+}
+.btn {
+  padding: 45px 55px;
+  text-align: center;
+  font-size: 40px;
+  margin: 6px 12px;
+  cursor: pointer;
+  color: black;
+  border: 2px solid black;
+border-radius:20px;
+}
+div{
+border:2px solid gray;
+padding:5px;
+width:520px;
+background-color:olive;
+margin-top:80px;
+}
+.txt{
+margin-left:10px;
+margin-top:5px;
+height:70px;
+width:350px;
+padding-right:5px;
+text-align:center;
+border-radius:10px;
+font-size:25px;
+font-weight:bold;
+color:white;
+letter-spacing:3px;
+background-color:black;
+}
+h1{
+font-size:50px;
+color:white;
+
+</style>
+</head>
+<body background="https://previews.123rf.com/images/rolaks/rolaks1206/rolaks120600009/14027027-illustration-by-winning-the-game-tic-tac-toe-on-a-black-background.jpg">
+<center>
+<h1><u>TIC TAC TOE</u></h1>
+
+<div><br>
+<input type="text" class="txt" id="ipt" value="Player 1" disabled>
+<table>
+<br>
+<tr>
+<td><input type=button value="" class="btn" id="1" ></button></td> 
+<td><input type=button value="" class="btn" id="2" ></button></td>
+<td><input type=button value="" class="btn" id="3" ></button></td>
+</tr>
+<tr>
+<td><input type=button value="" class="btn" id="4" ></button></td>
+<td><input type=button value="" class="btn" id="5" ></button></td>
+<td><input type=button value="" class="btn" id="6" ></button></td>
+</tr>
+<tr>
+<td><input type=button value="" class="btn" id="7" ></button></td>
+<td><input type=button value="" class="btn" id="8" ></button></td>
+<td><input type=button value="" class="btn" id="9" ></button></td>
+</tr>
+</table>
+</div>
+<center><button id="a" >RESTART</button></center>
+</body>  
+</html>
